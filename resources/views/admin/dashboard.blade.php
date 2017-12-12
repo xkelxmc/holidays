@@ -27,6 +27,26 @@
 
         <div class="row">
             <div class="col-sm-6">
+                <a href="{{route('admin.category.create')}}" class="btn btn-block btn-default">Создать категорию</a>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Категория первая</h4>
+                    <p class="list-group-item-text">
+                        Кол-во материалов
+                    </p>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="#" class="btn btn-block btn-default">Создать город</a>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Город первый</h4>
+                    <p class="list-group-item-text">
+                        Кол-во материалов
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
                 <a href="#" class="btn btn-block btn-default">Создать компанию</a>
                 <a href="#" class="list-group-item">
                     <h4 class="list-group-item-heading">Компания первая</h4>
