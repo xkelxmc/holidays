@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,500i,700,700i&subset=cyrillic);body {
+  margin: 0;
+  font-size: 14px;
+  font-family: Roboto, sans-serif !important;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: Roboto, sans-serif !important;
+}
+
+.auth-theme .main-header .navbar {
+  margin-left: 0;
+}
+
+.auth-theme .content-wrapper {
+  margin-left: 0;
+}
+
+.auth-theme .main-footer {
+  margin-left: 0;
+}
+
