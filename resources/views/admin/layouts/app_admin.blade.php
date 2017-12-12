@@ -12,8 +12,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div id="app">
@@ -39,11 +37,11 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Сайт</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Test</a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{route('admin.category.index')}}">Категории</a></li>
-                            <li><a href="#">тест</a></li>
-                            <li><a href="#">тест</a></li>
+                            <li><a href="#">Категории</a></li>
+                            <li><a href="#">Категории</a></li>
+                            <li><a href="#">Категории</a></li>
                         </ul>
                     </li>
                 </ul>

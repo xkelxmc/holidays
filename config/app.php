@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'ru',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,20 +176,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
-        /*
-        * Backpack Service Providers...
-        */
-        Backpack\Base\BaseServiceProvider::class,
-        Prologue\Alerts\AlertsServiceProvider::class,
-        Backpack\CRUD\CrudServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
-        Barryvdh\Elfinder\ElfinderServiceProvider::class,
-        Spatie\Backup\BackupServiceProvider::class,
-        Backpack\BackupManager\BackupManagerServiceProvider::class,
-        Backpack\Settings\SettingsServiceProvider::class,
-        Backpack\PageManager\PageManagerServiceProvider::class,
-        Backpack\PermissionManager\PermissionManagerServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
 

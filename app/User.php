@@ -2,17 +2,12 @@
 
 namespace App;
 
-use Backpack\Base\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;
-use Backpack\CRUD\CrudTrait;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
     use Notifiable;
-    use CrudTrait;
-    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -31,16 +26,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    /**
-     * Send the password reset notification.
-     *
-     * @param string $token
-     *
-     * @return void
-     */
-    public function sendPasswordResetNotification($token)
-    {
-        $this->notify(new ResetPasswordNotification($token));
-    }
 }
