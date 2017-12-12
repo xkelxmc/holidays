@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Config;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $test = Config::get('settings.contact_email');
         return view('home');
     }
 }
