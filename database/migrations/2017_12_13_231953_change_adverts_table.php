@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdvertFileTable extends Migration
+class ChangeAdvertsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateAdvertFileTable extends Migration
      */
     public function up()
     {
-        Schema::create('advert_file', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('advert_id')->unsigned();
-            $table->integer('file_id')->unsigned();
+        Schema::table('adverts', function (Blueprint $table) {
+            $table->boolean('main_page')->default(false);
         });
     }
 
@@ -27,6 +25,8 @@ class CreateAdvertFileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('advert_file');
+        Schema::table('adverts', function (Blueprint $table) {
+            $table->dropColumn('main_page');
+        });
     }
 }

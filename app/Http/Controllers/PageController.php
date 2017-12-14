@@ -14,7 +14,7 @@ class PageController extends Controller
 
         if (!$page)
         {
-            abort(404, 'Please go back to our <a href="'.url('').'">homepage</a>.');
+            abort(404, 'Вернуться на <a href="'.url('').'">главную</a>.');
         }
         $data = [
             'title' => $page->title,

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use Backpack\Base\app\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller
 {
+    protected $data = []; // the information we send to the view
+
     /*
     |--------------------------------------------------------------------------
     | Password Reset Controller
@@ -28,5 +30,21 @@ class ForgotPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    // -------------------------------------------------------
+    // Laravel overwrites for loading backpack views
+    // -------------------------------------------------------
+
+    /**
+     * Display the form to request a password reset link.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showLinkRequestForm()
+    {
+        $this->data['title'] = trans('profile.reset_password'); // set the page title
+
+        return view('profile.auth.passwords.email', $this->data);
     }
 }

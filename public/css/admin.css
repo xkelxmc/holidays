@@ -32,3 +32,15 @@ h6,
   margin-left: 0;
 }
 
+.main-header .logo-lg img {
+  height: 30px;
+}
+
+.main-header .logo-mini img {
+  height: 30px;
+}
+
+.wrapper .main-header > .logo {
+  background: #ffffff;
+}
+

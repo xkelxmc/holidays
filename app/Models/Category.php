@@ -89,6 +89,12 @@ class Category extends Model
 
         return $this->name;
     }
+
+
+    public function adverts()
+    {
+        return $this->hasMany('App\Models\Advert', 'category_id');
+    }
     /*
     |--------------------------------------------------------------------------
     | MUTATORS

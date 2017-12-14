@@ -1,60 +1,20 @@
-<html>
-  <head>
-    <title>{{ config('backpack.base.project_name') }} Error 404</title>
+@extends('layouts.theme')
 
-    <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        color: #B0BEC5;
-        display: table;
-        font-weight: 100;
-        font-family: 'Lato';
-      }
-
-      .container {
-        text-align: center;
-        display: table-cell;
-        vertical-align: middle;
-      }
-
-      .content {
-        text-align: center;
-        display: inline-block;
-      }
-
-      .title {
-        font-size: 156px;
-      }
-
-      .quote {
-        font-size: 36px;
-      }
-
-      .explanation {
-        font-size: 24px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="content">
-        <div class="title">404</div>
-        <div class="quote">Page not found.</div>
-        <div class="explanation">
-          <br>
-          <small>
+@section('content')
+  <div class="container error-requers">
+    <div class="content">
+      <div class="title">404</div>
+      <div class="quote">Страница не найдена</div>
+      <div class="explanation">
+        <br>
+        <small>
             <?php
-              $default_error_message = "Please return to <a href='".url('')."'>our homepage</a>.";
+            $default_error_message = "Вернуться на <a href='".url('')."'>главную</a>.";
             ?>
-            {!! isset($exception)? ($exception->getMessage()?$exception->getMessage():$default_error_message): $default_error_message !!}
-         </small>
-       </div>
+          {!! isset($exception)? ($exception->getMessage()?$exception->getMessage():$default_error_message): $default_error_message !!}
+        </small>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+
+@endsection

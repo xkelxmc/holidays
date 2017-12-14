@@ -14,67 +14,53 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<div>
-  <nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-
-        <!-- Collapsed Hamburger -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-        <!-- Branding Image -->
-        <a class="navbar-brand" href="{{ url('/') }}">
-          {{ config('app.name', 'Laravel') }}
-        </a>
-      </div>
-
-      <div class="collapse navbar-collapse" id="app-navbar-collapse">
-        <!-- Left Side Of Navbar -->
-        <ul class="nav navbar-nav">
-          &nbsp;
-        </ul>
-
-        <!-- Right Side Of Navbar -->
-        <ul class="nav navbar-nav navbar-right">
-          <!-- Authentication Links -->
-          @guest
-            <li><a href="{{ route('login') }}">Login</a></li>
-            <li><a href="{{ route('register') }}">Register</a></li>
-          @else
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                {{ Auth::user()->name }} <span class="caret"></span>
-              </a>
-
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="{{ route('logout') }}"
-                     onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                    Logout
-                  </a>
-
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    {{ csrf_field() }}
-                  </form>
-                </li>
-              </ul>
-            </li>
-          @endguest
-        </ul>
+<div id="app">
+  <div class="wrapper">
+    <div class="header">
+      <div class="container">
+        <form class="head" method="GET" action="{{route('search')}}">
+          <div class="head__logo">
+            <a href="#">
+              <img src="/img/Logo.png">
+            </a>
+          </div>
+          <div class="head__sort name">
+            <i class="fa fa-smile-o" aria-hidden="true"></i>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+            <select name="category">
+              <option value="0">Все праздники</option>
+              @foreach(\App\Models\Category::get() as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="head__search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input placeholder="Ключевые слова" name="search">
+          </div>
+          <div class="head__sort sity">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+            <select>
+              <option>Москва</option>
+            </select>
+          </div>
+          <div class="head__button">
+            <button type="submit">Найти</button>
+          </div>
+        </form>
       </div>
     </div>
-  </nav>
 
-  @yield('content')
+
+    @yield('content')
+
+    @include('layouts.footer')
+
+</div>
 </div>
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+@yield('scripts')
 </body>
 </html>

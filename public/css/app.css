@@ -8393,6 +8393,29 @@ button {
   transition: all .2s ease-in-out;
 }
 
+.error-requers.container {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.error-requers .content {
+  text-align: center;
+  display: inline-block;
+}
+
+.error-requers .title {
+  font-size: 156px;
+}
+
+.error-requers .quote {
+  font-size: 36px;
+}
+
+.error-requers .explanation {
+  font-size: 24px;
+}
+
 .br-radius {
   border-radius: 5px;
 }

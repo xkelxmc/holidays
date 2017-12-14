@@ -20,6 +20,11 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         $this->setupRoutes($this->app->router);
+        $this->loadHelpers();
+    }
+    public function loadHelpers()
+    {
+        require_once app_path('helpers.php');
     }
 
     /**
