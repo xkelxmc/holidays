@@ -51,6 +51,5 @@ Route::get('search', 'HomeController@search')->name('search');
 
 //Route::get('/search/{category?}', ['uses'=>'HomeController@search','as' => 'search']);
 
-
 Route::get('{page}/{subs?}', ['uses' => 'PageController@index'])
     ->where(['page' => '^((?!admin).)*$', 'subs' => '.*']);
