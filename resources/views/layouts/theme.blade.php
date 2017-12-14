@@ -21,7 +21,7 @@
         <form class="head" method="GET" action="{{route('search')}}">
           <div class="head__logo">
             <a href="#">
-              <img src="/img/Logo.png">
+              <img src="/img/logo.png">
             </a>
           </div>
           <div class="head__sort name">
