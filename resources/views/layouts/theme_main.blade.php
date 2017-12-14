@@ -51,7 +51,7 @@
           </div>
         </form>
         <div class="slider_header">
-          <img src="/img/ad/1.jpg">
+          <img src="/img/slider/1.jpg">
         </div>
       </div>
     </div>
