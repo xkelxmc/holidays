@@ -28,7 +28,7 @@
                             <label class="col-md-4 control-label">{{ trans('profile.lastname') }}</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" value="{{ old('lastname') }}">
+                                <input type="text" class="form-control" name="lastname" value="{{ old('lastname') }}">
 
                                 @if ($errors->has('lastname'))
                                     <span class="help-block">
@@ -41,7 +41,7 @@
                             <label class="col-md-4 control-label">{{ trans('profile.patronymic') }}</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" value="{{ old('patronymic') }}">
+                                <input type="text" class="form-control" name="patronymic" value="{{ old('patronymic') }}">
 
                                 @if ($errors->has('patronymic'))
                                     <span class="help-block">
@@ -54,7 +54,7 @@
                             <label class="col-md-4 control-label">{{ trans('profile.phone') }}</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" value="{{ old('phone') }}">
+                                <input type="text" class="form-control" name="phone" value="{{ old('phone') }}">
 
                                 @if ($errors->has('phone'))
                                     <span class="help-block">
