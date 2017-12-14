@@ -61,7 +61,7 @@ protected $fillable = ['company_id', 'category_id', 'image', 'images', 'title', 
     {
         $attribute_name = "image";
         $disk = "public";
-        $destination_path = "uploads/adverts/adv";
+        $destination_path = "uploads/a/";
 
         // if the image was erased
         if ($value==null) {
