@@ -98,6 +98,9 @@
       <!-- /.content-wrapper -->
 
       <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          Версия: {{\Tremby\LaravelGitVersion\GitVersionHelper::getVersion()}}
+        </div>
         {{ trans('profile.handcrafted_by') }} <a target="_blank" href="{{ config('backpack.base.developer_link') }}">{{ config('backpack.base.developer_name') }}</a>.
       </footer>
     </div>
