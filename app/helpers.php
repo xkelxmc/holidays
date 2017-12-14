@@ -1,44 +1,21 @@
 <?php
 
-if (!function_exists('backpack_url')) {
-    /**
-     * Appends the configured backpack prefix and returns
-     * the URL using the standard Laravel helpers.
-     *
-     * @param $path
-     *
-     * @return string
-     */
-    function backpack_url($path = null)
-    {
-        $path = !$path || (substr($path, 1, 1) == '/') ? $path : '/'.$path;
-
-        return url(config('backpack.base.route_prefix', 'admin').$path);
-    }
-}
-
-if (!function_exists('backpack_avatar')) {
-    /**
-     * Returns the avatar URL of a user.
-     *
-     * @param $user
-     *
-     * @return string
-     */
-    function backpack_avatar_url($user)
-    {
-        switch (config('backpack.base.avatar_type')) {
-            case 'gravatar':
-                return Gravatar::fallback('https://placehold.it/160x160/00a65a/ffffff/&text='.$user->name[0])->get($user->email);
-                break;
-
-            case 'placehold':
-                return 'https://placehold.it/160x160/00a65a/ffffff/&text='.$user->name[0];
-                break;
-
-            default:
-                return $user->{config('backpack.base.avatar_type')};
-                break;
-        }
+if (!function_exists('getDateCustom')) {
+    function getDateCustom($date){
+        $month = array(
+            '01' => 'Янв',
+            '02' => 'Февр',
+            '03' => 'Март',
+            '04' => 'Фпр',
+            '05' => 'Май',
+            '06' => 'Июнь',
+            '07' => 'Июль',
+            '08' => 'Авг',
+            '09' => 'Сент',
+            '10' => 'Окт',
+            '11' => 'Нояб',
+            '12' => 'Дек',
+        );
+        return date("d", strtotime($date)) . ' ' . $month[(date("m", strtotime($date)))];
     }
 }
