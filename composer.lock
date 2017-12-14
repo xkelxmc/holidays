@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a15234f1e1a325770f4c751bdd5a0e1",
+    "content-hash": "6a14b5fca209062fc1bce180e2f673f4",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -2219,6 +2219,49 @@
             ],
             "description": "An adapter decorator to enable meta-data caching.",
             "time": "2017-03-20T09:59:34+00:00"
+        },
+        {
+            "name": "miroc/laravel-adminer",
+            "version": "4.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/miroc/Laravel-Adminer.git",
+                "reference": "c93d2757529907d25a6e53d77e3b99000793b6ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/miroc/Laravel-Adminer/zipball/c93d2757529907d25a6e53d77e3b99000793b6ec",
+                "reference": "c93d2757529907d25a6e53d77e3b99000793b6ec",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Miroc\\LaravelAdminer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miroslav Svitok",
+                    "email": "mirosvitok@gmail.com"
+                }
+            ],
+            "description": "Adminer (by Jakub Vrana) wrapper for Laravel 5",
+            "keywords": [
+                "adminer",
+                "database",
+                "laravel5",
+                "management"
+            ],
+            "time": "2017-08-01T22:46:06+00:00"
         },
         {
             "name": "monolog/monolog",
