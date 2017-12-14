@@ -50,7 +50,7 @@
             <button type="submit">Найти</button>
           </div>
         </form>
-        <div class="slider_header">
+        <div class="slider_header" style="display:none;">
           <img src="/img/slider/1.jpg">
         </div>
       </div>
