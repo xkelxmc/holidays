@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a14b5fca209062fc1bce180e2f673f4",
+    "content-hash": "c12c6957b8119eac1d94e5886296cc0c",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -2221,27 +2221,30 @@
             "time": "2017-03-20T09:59:34+00:00"
         },
         {
-            "name": "miroc/laravel-adminer",
-            "version": "4.3.1",
+            "name": "leung/laravel-adminer",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/miroc/Laravel-Adminer.git",
-                "reference": "c93d2757529907d25a6e53d77e3b99000793b6ec"
+                "url": "https://github.com/leung0826/adminer-for-laravel.git",
+                "reference": "346a6bfe984a64999b2ab01bb0106003a63e4310"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/miroc/Laravel-Adminer/zipball/c93d2757529907d25a6e53d77e3b99000793b6ec",
-                "reference": "c93d2757529907d25a6e53d77e3b99000793b6ec",
+                "url": "https://api.github.com/repos/leung0826/adminer-for-laravel/zipball/346a6bfe984a64999b2ab01bb0106003a63e4310",
+                "reference": "346a6bfe984a64999b2ab01bb0106003a63e4310",
                 "shasum": ""
             },
-            "require": {
-                "illuminate/support": "5.*",
-                "php": ">=5.4.0"
-            },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Simple\\Adminer\\AdminerServiceProvider"
+                    ]
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "Miroc\\LaravelAdminer\\": "src/"
+                    "Simple\\Adminer\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2250,18 +2253,16 @@
             ],
             "authors": [
                 {
-                    "name": "Miroslav Svitok",
-                    "email": "mirosvitok@gmail.com"
+                    "name": "leung",
+                    "email": "simple@gmail.com"
+                },
+                {
+                    "name": "Artistan",
+                    "email": "artistan@gmail.com"
                 }
             ],
-            "description": "Adminer (by Jakub Vrana) wrapper for Laravel 5",
-            "keywords": [
-                "adminer",
-                "database",
-                "laravel5",
-                "management"
-            ],
-            "time": "2017-08-01T22:46:06+00:00"
+            "description": "adminer for laravel5.*",
+            "time": "2017-08-03T18:09:26+00:00"
         },
         {
             "name": "monolog/monolog",
