@@ -76,6 +76,9 @@ class ProfileRegisterController extends Controller
 
         $user = $user->create([
             'name'     => $data['name'],
+            'lastname'     => $data['lastname'],
+            'patronymic'     => $data['patronymic'],
+            'phone'     => $data['phone'],
             'email'    => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
