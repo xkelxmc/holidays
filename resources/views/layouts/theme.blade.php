@@ -20,7 +20,7 @@
       <div class="container">
         <form class="head" method="GET" action="{{route('search')}}">
           <div class="head__logo">
-            <a href="#">
+            <a href="{{url('/')}}">
               <img src="/img/logo.png">
             </a>
           </div>

@@ -21,7 +21,7 @@
         <h2 class="header__title">Поиск организаторов праздников по всей России</h2>
         <form class="head" method="GET" action="{{route('search')}}">
           <div class="head__logo head__logo__main">
-            <a href="#">
+            <a href="{{url('/')}}">
               <img src="/img/logo.png">
             </a>
           </div>
