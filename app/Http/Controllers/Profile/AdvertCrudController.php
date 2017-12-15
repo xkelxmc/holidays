@@ -97,15 +97,7 @@ class AdvertCrudController extends CrudController
             'type'  => 'simplemde',
         ]);
 
-        $this->crud->addField([
-            'name'  => 'meta_title',
-            'label' => 'Мета заголовок',
-        ]);
-        $this->crud->addField([
-            'name'  => 'meta_description',
-            'label' => 'Мета описание',
-            'type'  => 'textarea',
-        ]);
+       
 
         $this->crud->addField([   // Hidden
             'name'    => 'created_by',
