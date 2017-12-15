@@ -36,7 +36,7 @@ class RegisterController extends Controller
 
         // Where to redirect users after login / registration.
         $this->redirectTo = property_exists($this, 'redirectTo') ? $this->redirectTo
-            : config('backpack.base.route_prefix', 'dashboard');
+            : 'profile';
     }
 
     /**
@@ -54,6 +54,9 @@ class RegisterController extends Controller
 
         return Validator::make($data, [
             'name'     => 'required|max:255',
+            'lastname'  => 'required|max:255',
+            'patronymic' => 'max:255',
+            'phone'     => 'required|min:6|max:12',
             'email'    => 'required|email|max:255|unique:'.$users_table,
             'password' => 'required|min:6|confirmed',
         ]);
@@ -73,6 +76,9 @@ class RegisterController extends Controller
 
         $user = $user->create([
             'name'     => $data['name'],
+            'lastname'     => $data['lastname'],
+            'patronymic'     => $data['patronymic'],
+            'phone'     => $data['phone'],
             'email'    => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
@@ -91,12 +97,12 @@ class RegisterController extends Controller
     {
         // if registration is closed, deny access
         if (!config('backpack.base.registration_open')) {
-            abort(403, trans('backpack::base.registration_closed'));
+            abort(403, trans('profile.registration_closed'));
         }
 
-        $this->data['title'] = trans('backpack::base.register'); // set the page title
+        $this->data['title'] = trans('profile.register'); // set the page title
 
-        return view('backpack::auth.register', $this->data);
+        return view('profile.auth.register', $this->data);
     }
 
     /**
@@ -110,7 +116,7 @@ class RegisterController extends Controller
     {
         // if registration is closed, deny access
         if (!config('backpack.base.registration_open')) {
-            abort(403, trans('backpack::base.registration_closed'));
+            abort(403, trans('profile.registration_closed'));
         }
 
         $this->validator($request->all())->validate();

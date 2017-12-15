@@ -73,10 +73,7 @@ class AdvertCrudController extends CrudController
         ]);
         $this->crud->addField([
             'name' => 'slug',
-            'label' => 'Slug (URL)',
-            'type' => 'text',
-            'hint' => trans('categories.category_slug_hint'),
-            // 'disabled' => 'disabled'
+            'type' => 'hidden',
         ]);
         $this->crud->addField([   // Number
             'name'  => 'price',

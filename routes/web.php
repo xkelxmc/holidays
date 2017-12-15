@@ -34,8 +34,8 @@ Route::group(
         Route::post('logout', 'LoginController@logout');
 
         // Registration Routes...
-        Route::get('register', 'ProfileRegisterController@showRegistrationForm')->name('profile.auth.register');
-        Route::post('register', 'ProfileRegisterController@register');
+        Route::get('register', 'RegisterController@showRegistrationForm')->name('profile.auth.register');
+        Route::post('register', 'RegisterController@register');
 
         // Password Reset Routes...
         Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('profile.auth.password.reset');
