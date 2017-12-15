@@ -117,8 +117,8 @@ class AdvertCrudController extends CrudController
         ]);
 
         $this->crud->addField([ // base64_image
-            'label' => "Image",
-            'name' => "Картинка",
+            'label' => "Картинка",
+            'name' => "image",
             'type' => 'image',
             'upload' => true,
             'crop' => true, // set to true to allow cropping, false to disable
