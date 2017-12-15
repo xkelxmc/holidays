@@ -11,10 +11,6 @@
               <a href="{{route('obyav', $advert->slug)}}" class="item-main"  style="background-image: url(/storage/{{$advert->image}})">
                 <div>
                   <h3>{{$advert->title}}</h3>
-                  <ul>
-                    <li><i class="fa fa-bullhorn" aria-hidden="true"></i> {{getDateCustom($advert->created_at)}}</li>
-                    <li>{{$advert->price}} ₽</li>
-                  </ul>
                 </div>
               </a>
             </div>

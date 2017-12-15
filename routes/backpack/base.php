@@ -3,17 +3,6 @@
 
 Route::group(
     [
-        'namespace'  => 'Auth',
-        'middleware' => 'web',
-        'prefix'     => config('backpack.base.route_prefix'),
-    ], function (){
-    Route::get('register', 'RegisterController@showRegistrationForm')->name('backpack.auth.register');
-    Route::post('register', 'RegisterController@register');
-});
-
-
-Route::group(
-    [
         'namespace'  => 'Backpack\Base\app\Http\Controllers',
         'middleware' => ['web'],
         'prefix'     => config('backpack.base.route_prefix'),
@@ -26,10 +15,6 @@ Route::group(
             Route::post('login', 'Auth\LoginController@login');
             Route::get('logout', 'Auth\LoginController@logout')->name('backpack.auth.logout');
             Route::post('logout', 'Auth\LoginController@logout');
-
-            // Registration Routes...
-            Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('backpack.auth.register');
-            Route::post('register', 'Auth\RegisterController@register');
 
             // Password Reset Routes...
             Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('backpack.auth.password.reset');
