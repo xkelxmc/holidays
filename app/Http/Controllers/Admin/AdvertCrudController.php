@@ -84,30 +84,18 @@ class AdvertCrudController extends CrudController
             'entity' => 'category',
             'attribute' => 'name',
             'model' => "App\Models\Category",
-            'readonly'=>'readonly',
         ]);
 
         $this->crud->addField([
             'name'  => 'title',
             'label' => 'Заголовок',
             'type' => 'text',
-            'readonly'=>'readonly',
         ]);
         $this->crud->addField([
             'name' => 'slug',
             'label' => 'Slug (URL)',
             'type' => 'text',
             'hint' => trans('categories.category_slug_hint'),
-            'readonly'=>'readonly',
-            // 'disabled' => 'disabled'
-        ]);
-        $this->crud->addField([   // Number
-            'name'  => 'price',
-            'label' => 'Цена',
-            'type'  => 'number',
-            'attributes' => ['step' => 'any'], // allow decimals
-            'suffix' => "Руб.",
-            'readonly'=>'readonly',
         ]);
 
 
@@ -116,7 +104,6 @@ class AdvertCrudController extends CrudController
             'label' => 'Короткое описание',
             'hint' => 'Описание для вывода на странице поиска объявления',
             'type'  => 'textarea',
-            'readonly'=>'readonly',
         ]);
 
         $this->crud->addField([   // Textarea
@@ -124,19 +111,24 @@ class AdvertCrudController extends CrudController
             'label' => 'Описание',
             'hint' => 'Описание для полной страницы объявления',
             'type'  => 'simplemde',
-            'readonly'=>'readonly',
+        ]);
+
+        $this->crud->addField([   // Number
+            'name'  => 'price',
+            'label' => 'Цена',
+            'type'  => 'number',
+            'attributes' => ['step' => 'any'], // allow decimals
+            'suffix' => "Руб.",
         ]);
 
         $this->crud->addField([
             'name'  => 'meta_title',
             'label' => 'Мета заголовок',
-            'readonly'=>'readonly',
         ]);
         $this->crud->addField([
             'name'  => 'meta_description',
             'label' => 'Мета описание',
             'type'  => 'textarea',
-            'readonly'=>'readonly',
         ]);
 
         $this->crud->addField([   // Hidden

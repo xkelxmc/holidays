@@ -75,13 +75,6 @@ class AdvertCrudController extends CrudController
             'name' => 'slug',
             'type' => 'hidden',
         ]);
-        $this->crud->addField([   // Number
-            'name'  => 'price',
-            'label' => 'Цена',
-            'type'  => 'number',
-            'attributes' => ['step' => 'any'], // allow decimals
-            'suffix' => "Руб.",
-        ]);
 
         $this->crud->addField([   // Textarea
             'name'  => 'description_short',
@@ -97,8 +90,13 @@ class AdvertCrudController extends CrudController
             'type'  => 'simplemde',
         ]);
 
-       
-
+        $this->crud->addField([   // Number
+            'name'  => 'price',
+            'label' => 'Цена',
+            'type'  => 'number',
+            'attributes' => ['step' => 'any'], // allow decimals
+            'suffix' => "Руб.",
+        ]);
         $this->crud->addField([   // Hidden
             'name'    => 'created_by',
             'type'    => 'hidden',
