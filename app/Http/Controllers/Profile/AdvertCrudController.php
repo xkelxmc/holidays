@@ -77,13 +77,6 @@ class AdvertCrudController extends CrudController
         ]);
 
         $this->crud->addField([   // Textarea
-            'name'  => 'description_short',
-            'label' => 'Короткое описание',
-            'hint' => 'Описание для вывода на странице поиска объявления',
-            'type'  => 'textarea',
-        ]);
-
-        $this->crud->addField([   // Textarea
             'name'  => 'description',
             'label' => 'Описание',
             'hint' => 'Описание для полной страницы объявления',
