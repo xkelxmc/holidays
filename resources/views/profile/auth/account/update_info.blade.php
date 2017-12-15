@@ -72,16 +72,31 @@
                             $field = 'name';
                         @endphp
                         <label class="required">{{ $label }}</label>
-                        <input required class="form-control" type="text" name="{{ $field }}" value="{{ old($field) ? old($field) : $user[$field] }} ">
+                        <input required class="form-control" type="text" name="{{ $field }}" value="{{ old($field) ? old($field) : $user[$field] }}">
                     </div>
-
+                    <div class="form-group">
+                        @php
+                            $label = trans('profile.lastname');
+                            $field = 'lastname';
+                        @endphp
+                        <label class="required">{{ $label }}</label>
+                        <input required class="form-control" type="text" name="{{ $field }}" value="{{ old($field) ? old($field) : $user[$field] }}">
+                    </div>
+                    <div class="form-group">
+                        @php
+                            $label = trans('profile.patronymic');
+                            $field = 'patronymic';
+                        @endphp
+                        <label class="required">{{ $label }}</label>
+                        <input required class="form-control" type="text" name="{{ $field }}" value="{{ old($field) ? old($field) : $user[$field] }}">
+                    </div>
                     <div class="form-group">
                         @php
                             $label = trans('profile.email_address');
                             $field = 'email';
                         @endphp
                         <label class="required">{{ $label }}</label>
-                        <input required class="form-control" type="email" name="{{ $field }}" value="{{ old($field) ? old($field) : $user[$field] }} ">
+                        <input required class="form-control" type="email" name="{{ $field }}" value="{{ old($field) ? old($field) : $user[$field] }}">
                     </div>
 
                 </div>
