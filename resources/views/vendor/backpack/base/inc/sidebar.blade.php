@@ -29,7 +29,7 @@
 
         <li><a href="{{ backpack_url('category') }}"><i class="fa fa-list"></i> <span>{{ trans('categories.categories') }}</span></a></li>
 
-        <li><a href="{{ backpack_url('advert') }}"><i class="fa fa-newspaper-o"></i> <span>Объявления</span></a></li>
+        <li><a href="{{ backpack_url('obyav') }}"><i class="fa fa-newspaper-o"></i> <span>Объявления</span></a></li>
 
         <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/page') }}"><i class="fa fa-file-o"></i>
             <span>{{ trans('main.pages') }}</span></a></li>

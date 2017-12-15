@@ -18,7 +18,7 @@ class AdvertCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Models\Advert');
-        $this->crud->setRoute('profile/advert');
+        $this->crud->setRoute('profile/obyav');
         $this->crud->setEntityNameStrings('объявление', 'объявления');
 
         /*
