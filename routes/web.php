@@ -13,7 +13,7 @@
 
 Route::group(['prefix'=>'profile', 'namespace'=>'Profile', 'middleware'=>['web', 'profile']], function (){
     Route::get('/', 'DashboardController@dashboard')->name('profile.index');
-    CRUD::resource('advert', 'AdvertCrudController');
+    CRUD::resource('obyav', 'AdvertCrudController');
 
     Route::get('edit-account-info', 'MyAccountController@getAccountInfoForm')->name('profile.account.info');
     Route::post('edit-account-info', 'MyAccountController@postAccountInfoForm');
@@ -46,7 +46,7 @@ Route::group(
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('category/{slug?}', 'HomeController@category')->name('category');
-Route::get('advert/{slug?}', 'HomeController@advert')->name('advert');
+Route::get('obyav/{slug?}', 'HomeController@advert')->name('obyav');
 Route::get('search', 'HomeController@search')->name('search');
 
 //Route::get('/search/{category?}', ['uses'=>'HomeController@search','as' => 'search']);

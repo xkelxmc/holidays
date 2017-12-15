@@ -24,7 +24,7 @@
       <!-- ================================================ -->
         <!-- ==== Recommended place for admin menu items ==== -->
         <!-- ================================================ -->
-        <li><a href="{{ url('profile/advert') }}"><i class="fa fa-newspaper-o"></i> <span>Объявления</span></a></li>
+        <li><a href="{{ url('profile/obyav') }}"><i class="fa fa-newspaper-o"></i> <span>Объявления</span></a></li>
 
         <!-- ======================================= -->
         {{-- <li class="header">Other menus</li> --}}

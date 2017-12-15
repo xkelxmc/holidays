@@ -6,6 +6,6 @@ Route::group([
     'middleware' => ['web', 'role:admin'],
 ], function () {
     CRUD::resource('category', 'CategoryCrudController');
-    CRUD::resource('advert', 'AdvertCrudController');
+    CRUD::resource('obyav', 'AdvertCrudController');
 //    CRUD::resource('tag', 'TagCrudController');
 });

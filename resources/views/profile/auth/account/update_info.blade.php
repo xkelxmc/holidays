@@ -68,7 +68,7 @@
 
                     <div class="form-group">
                         @php
-                            $label = trans('profile.base.name');
+                            $label = trans('profile.name');
                             $field = 'name';
                         @endphp
                         <label class="required">{{ $label }}</label>

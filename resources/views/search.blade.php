@@ -27,10 +27,10 @@
       @if(count($adverts))
         @foreach($adverts as $advert)
           <div class="item">
-            <a href="{{route('advert', $advert->slug)}}" class="item_img" style="background-image: url(/storage/{{$advert->image}})">
+            <a href="{{route('obyav', $advert->slug)}}" class="item_img" style="background-image: url(/storage/{{$advert->image}})">
             </a>
             <div class="item_text">
-              <a href="{{route('advert', $advert->slug)}}"><h3>{{$advert->title}}</h3><span>{{$advert->price}} ₽</span></a>
+              <a href="{{route('obyav', $advert->slug)}}"><h3>{{$advert->title}}</h3><span>{{$advert->price}} ₽</span></a>
 
               <p>
                 {{$advert->description_short}}

@@ -17,7 +17,7 @@ class AdvertCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Models\Advert');
-        $this->crud->setRoute('admin/advert');
+        $this->crud->setRoute('admin/obyav');
         $this->crud->setEntityNameStrings('объявление', 'объявления');
 
         $this->crud->denyAccess(['create', 'delete']);
@@ -28,7 +28,10 @@ class AdvertCrudController extends CrudController
         */
 
         // ------ CRUD COLUMNS
-        $this->crud->addColumn('title'); // add a text column, at the end of the stack
+        $this->crud->addColumn([
+        'name' => 'title', // The db column name
+            'label' => "Название", // Table column heading
+        ]); // add a text column, at the end of the stack
         $this->crud->addColumn('slug'); // add a single column, at the end of the stack
         $this->crud->addColumn([
             'name' => 'published', // The db column name
@@ -75,7 +78,7 @@ class AdvertCrudController extends CrudController
             'type'  => 'checkbox',
         ]);
         $this->crud->addField([
-            'label' => 'Category',
+            'label' => 'Категория',
             'type' => 'select',
             'name' => 'category_id',
             'entity' => 'category',
@@ -100,7 +103,7 @@ class AdvertCrudController extends CrudController
         ]);
         $this->crud->addField([   // Number
             'name'  => 'price',
-            'label' => 'price',
+            'label' => 'Цена',
             'type'  => 'number',
             'attributes' => ['step' => 'any'], // allow decimals
             'suffix' => "Руб.",
@@ -110,26 +113,28 @@ class AdvertCrudController extends CrudController
 
         $this->crud->addField([   // Textarea
             'name'  => 'description_short',
-            'label' => 'description_short',
+            'label' => 'Короткое описание',
+            'hint' => 'Описание для вывода на странице поиска объявления',
             'type'  => 'textarea',
             'readonly'=>'readonly',
         ]);
 
         $this->crud->addField([   // Textarea
             'name'  => 'description',
-            'label' => 'description',
+            'label' => 'Описание',
+            'hint' => 'Описание для полной страницы объявления',
             'type'  => 'simplemde',
             'readonly'=>'readonly',
         ]);
 
         $this->crud->addField([
             'name'  => 'meta_title',
-            'label' => 'meta_title',
+            'label' => 'Мета заголовок',
             'readonly'=>'readonly',
         ]);
         $this->crud->addField([
             'name'  => 'meta_description',
-            'label' => 'meta_description',
+            'label' => 'Мета описание',
             'type'  => 'textarea',
             'readonly'=>'readonly',
         ]);
