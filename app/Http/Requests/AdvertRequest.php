@@ -26,10 +26,7 @@ class AdvertRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'title' => 'required|min:5|max:255',
             'price' => 'required',
             'category_id' => 'required',
-            'description_short' => 'required|min:5|max:255',
             'description' => 'required|min:5|max:4000',
-            'meta_title' => 'max:60',
-            'meta_description' => 'max:160',
             'image' => 'required',
         ];
     }
